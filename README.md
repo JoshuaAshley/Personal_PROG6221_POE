@@ -66,3 +66,6 @@ The file will be updated when this version is released.
 The file will be updated when this version is released.
 
 ## Developer/s
+### Joshua Ashley
+| [Email](st10060590@vcconnect.edu.za)        |[LinkedIn](https://www.linkedin.com/in/joshua-ashley-857001227/)         |
+| --------------------------------------------|------------------------------------------------------------------------:|
