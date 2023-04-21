@@ -1,5 +1,5 @@
 # PROG6221 Programming 2A Portfolio OF Evidence
-
+![alt text](https://github.com/JoshuaAshley/Personal_PROG6221_POE/blob/main/ST10060590_PROG6221_POE/Image_Resources/Sanele's_Cooking_Book.png)
 ## Sanele's Cooking Book
 ### Description
 Welcome to Sanele's Cooking Book Application: The place where you can create all your recipe needs!<br/>
@@ -55,3 +55,11 @@ A console application with colored text for menus, correct messages, or error me
 10. The user can option to set the ingredient amounts back to the original values.<br/>
 11. The user can option to reset the recipe.<br/>
 12. The user can option to create a new recipe; however the previous recipe/s will not be stored in memory.
+
+### PART TWO
+The file will be updated when this version is released.
+
+### PART THREE (FULL APPLICATION)
+The file will be updated when this version is released.
+
+## Developer/s
