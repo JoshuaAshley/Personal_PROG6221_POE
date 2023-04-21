@@ -1,0 +1,15 @@
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\bin\Debug\net6.0\ST10060590_PROG6221_POE.exe
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\bin\Debug\net6.0\ST10060590_PROG6221_POE.deps.json
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\bin\Debug\net6.0\ST10060590_PROG6221_POE.runtimeconfig.json
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\bin\Debug\net6.0\ST10060590_PROG6221_POE.dll
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\bin\Debug\net6.0\ST10060590_PROG6221_POE.pdb
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\obj\Debug\net6.0\ST10060590_PROG6221_POE.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\obj\Debug\net6.0\ST10060590_PROG6221_POE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\obj\Debug\net6.0\ST10060590_PROG6221_POE.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\obj\Debug\net6.0\ST10060590_PROG6221_POE.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\obj\Debug\net6.0\ST10060590_PROG6221_POE.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\obj\Debug\net6.0\ST10060590_PROG6221_POE.dll
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\obj\Debug\net6.0\refint\ST10060590_PROG6221_POE.dll
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\obj\Debug\net6.0\ST10060590_PROG6221_POE.pdb
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\obj\Debug\net6.0\ST10060590_PROG6221_POE.genruntimeconfig.cache
+C:\Users\Administrator\source\repos\ST10060590_PROG6221_POE\ST10060590_PROG6221_POE\obj\Debug\net6.0\ref\ST10060590_PROG6221_POE.dll
