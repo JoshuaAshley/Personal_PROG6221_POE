@@ -70,14 +70,28 @@ namespace RecipeBook
     //class of Recipe to manage all the recipe variables and objects of other classes
     public class Recipe
     {
-        //public variable declarations
+        //variable for recipe name
         public string recipeName;
+
+        //variable for number of ingredients
         public int numIngredients;
+
+        //variable for array of objects
         public Ingredient[] ingredients;
+
+        //variable for number of instructions
         public int numMethodSteps;
+
+        //variable for arrray of objects
         public Method[] steps;
+
+        //the amount that trakcs the current scaled amount
         public float scaleUpAmount;
+
+        //the amount that tracks all scaled up amounts by multiplying every time while the user has not chosen to scale down yet
         public float scaleDownAmount;
+
+        //variable for using methods from class as an object
         public Validation validation;
 
         //constructor used to set the variables to either null or certain values
@@ -89,16 +103,21 @@ namespace RecipeBook
             //initializes the vlaidation class so that its methods can be used elsewhere
             validation = new Validation();
 
-            //sets scaleAmount to a 1 for now
+            //sets scaleUpAmount to a 1 for as a start
             scaleUpAmount = 1;
 
+            //sets the scaleDownAmount to 1 as a start
             scaleDownAmount = 1;
 
             //methods that must run for the application to work correclty
+
+            //first welcomes the user
             DisplayWelcome();
 
+            //then lets the user make the recipe
             CreateRecipe();
 
+            //then the user can view and change the recipe
             Menu();
         }
 
@@ -246,9 +265,10 @@ namespace RecipeBook
             //loops through the full array and writes the formatted string of the Ingredients method to create a neat output
             for (int i = 0; i < ingredients.Length; i++)
             {
-
+                //changes the ingredients measurements and quantites accordingly before being displayed
                 ChangeMeasurement(ingredients[i]);
 
+                //displays the ingredient
                 output += ingredients[i].DisplayIngredients() + "\n";
             }
 
@@ -264,6 +284,7 @@ namespace RecipeBook
             //loops through the full array and writes the formatted string of the Method method to create a neat output
             for (int i = 0; i < steps.Length; i++)
             {
+                //displays the step
                 output += steps[i].DisplayStep(i + 1) + "\n";
             }
 
@@ -282,8 +303,10 @@ namespace RecipeBook
             //loops through the full array and writes the formatted string of the Ingredients method to create a neat output
             for (int i = 0; i < ingredients.Length; i++)
             {
+                //changes the ingredients measurements and quantites accordingly before being displayed
                 ChangeMeasurement(ingredients[i]);
 
+                //displays the ingredient
                 output += ingredients[i].DisplayIngredients() + "\n";
             }
 
@@ -295,6 +318,7 @@ namespace RecipeBook
             //loops through the full array and writes the formatted string of the Method method to create a neat output
             for (int i = 0; i < steps.Length; i++)
             {
+                //dipslays the step
                 output += steps[i].DisplayStep(i + 1) + "\n";
             }
 
@@ -623,25 +647,28 @@ namespace RecipeBook
             //if variable is 1
             if (option == 1)
             {
-                //scale amount is half with the float symbol
+                //scaleUpAmount is half with the float symbol
                 scaleUpAmount = 0.5f;
 
+                //scaleDownAmount is multiplied itself with the current float value to trakc all past scale changes while the ScaleDown() method has been used yet
                 scaleDownAmount *= 0.5f;
             }
             //else if variable is 2
             else if (option == 2)
             {
-                //scale amount is double
+                //scaleUpAmount is double
                 scaleUpAmount = 2;
 
+                //scaleDownAmount is multiplied itself with the current float value to trakc all past scale changes while the ScaleDown() method has been used yet
                 scaleDownAmount *= 2;
             }
             //else if variable is 3
             else if (option == 3)
             {
-                //scale amount is triple
+                //scaleUpAmount is triple
                 scaleUpAmount = 3;
 
+                //scaleDownAmount is multiplied itself with the current float value to trakc all past scale changes while the ScaleDown() method has been used yet
                 scaleDownAmount *= 3;
             }
 
@@ -690,6 +717,8 @@ namespace RecipeBook
             {
                 //else scale down the ingredient values with the current scale amount which will be the same amount that was used to upscale the ingredients
                 //as seen, this method will do the opposite effect to the scale up method, meaning the ingredients will return to their original values
+                //if multiple scaleUp() methods have been selected before this method is selected, the scaleDownAmount will have a number that has tracked
+                //all the past changes and now can be used to get back to the original amount
                 ScaleDown(scaleDownAmount);
 
                 //sets the text console color to a correct message indication color
@@ -701,7 +730,8 @@ namespace RecipeBook
                 //resets the text console color
                 Console.ForegroundColor = ConsoleColor.Gray;
 
-                //now that the ingredients have returned to the original values, reset the scale down amount to 1 so that when this option is chosen again, the scale amount won't scale down the original items again, which is not intended
+                //now that the ingredients have returned to the original values, reset the scale down amount to 1 so that when this option is chosen
+                //again, the scale amount won't scale down the original items again, which is not intended
                 scaleDownAmount = 1;
             }
         }
