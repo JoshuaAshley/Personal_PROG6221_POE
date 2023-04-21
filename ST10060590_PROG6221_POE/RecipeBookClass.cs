@@ -282,7 +282,6 @@ namespace RecipeBook
             //loops through the full array and writes the formatted string of the Ingredients method to create a neat output
             for (int i = 0; i < ingredients.Length; i++)
             {
-
                 ChangeMeasurement(ingredients[i]);
 
                 output += ingredients[i].DisplayIngredients() + "\n";
@@ -494,10 +493,43 @@ namespace RecipeBook
                 ingredient.Quantity = ingredient.Quantity / 3f;
                 ingredient.Measurement = "tablespoon/s";
             }
-            else if ((currentMeasurement == "tablespoon" || currentMeasurement == "tablespoons" || currentMeasurement == "tablespoon/s") && ((ingredient.Quantity / 3) <= 1))
+            else if ((currentMeasurement == "tablespoon" || currentMeasurement == "tablespoons" || currentMeasurement == "tablespoon/s") && ((ingredient.Quantity / 3) < 1))
             {
                 ingredient.Quantity = ingredient.Quantity * 3f;
                 ingredient.Measurement = "teaspoon/s";
+            }
+
+            if ((currentMeasurement == "tablespoon" || currentMeasurement == "tablespoons" || currentMeasurement == "tablespoon/s") && ingredient.Quantity >= 16)
+            {
+                ingredient.Quantity = ingredient.Quantity / 16f;
+                ingredient.Measurement = "cup/s";
+            }
+            else if ((currentMeasurement == "cup" || currentMeasurement == "cups" || currentMeasurement == "cup/s") && ((ingredient.Quantity / 16) < 1))
+            {
+                ingredient.Quantity = ingredient.Quantity * 16f;
+                ingredient.Measurement = "tablespoon/s";
+            }
+
+            if ((currentMeasurement == "g" || currentMeasurement == "g/s" || currentMeasurement == "gram" || currentMeasurement == "grams" || currentMeasurement == "gram/s") && ingredient.Quantity >= 1000)
+            {
+                ingredient.Quantity = ingredient.Quantity / 1000f;
+                ingredient.Measurement = "kg/s";
+            }
+            else if ((currentMeasurement == "kg" || currentMeasurement == "kgs" || currentMeasurement == "kg/s" || currentMeasurement == "kilogram" || currentMeasurement == "kilograms" || currentMeasurement == "kilogram/s") && ((ingredient.Quantity / 1000) < 1))
+            {
+                ingredient.Quantity = ingredient.Quantity * 1000f;
+                ingredient.Measurement = "g/s";
+            }
+
+            if ((currentMeasurement == "ml" || currentMeasurement == "ml/s" || currentMeasurement == "milliliter" || currentMeasurement == "milliliters" || currentMeasurement == "milliliter/s") && ingredient.Quantity >= 1000)
+            {
+                ingredient.Quantity = ingredient.Quantity / 1000f;
+                ingredient.Measurement = "l/s";
+            }
+            else if ((currentMeasurement == "l" || currentMeasurement == "ls" || currentMeasurement == "l/s" || currentMeasurement == "liter" || currentMeasurement == "liters" || currentMeasurement == "liter/s") && ((ingredient.Quantity / 1000) < 1))
+            {
+                ingredient.Quantity = ingredient.Quantity * 1000f;
+                ingredient.Measurement = "ml/s";
             }
         }
 
@@ -643,9 +675,12 @@ namespace RecipeBook
             //gives the user a choice
             Console.WriteLine("Are you sure you would like to reset the recipe? Doing this will remove everything.\n" +
                 "Type 'Yes' to proceed.\n" +
-                "Type 'No' to return to the menu.");
+                "Type 'No' to return to the menu.\n");
 
             Console.ForegroundColor = ConsoleColor.Gray;
+
+            //input message
+            Console.Write("Select an option: ");
 
             //input
             string choice = Console.ReadLine().Trim().ToLower();
