@@ -484,51 +484,90 @@ namespace RecipeBook
             }
         }
 
+        //method that changes the measuremnt of the ingredient depending on if the quantity has reached a new measurement level (e.g. g->kg)
+        //the quantity will also change accordingly
         public void ChangeMeasurement(Ingredient ingredient)
         {
+            //variable created to store measurement lowercase so comparing strings will be simpler
             string currentMeasurement = ingredient.Measurement.ToLower();
 
+            //convert teaspoons to tablespoons and back again
+            //if the ingredient's specific measurement is equal to any of the possible texts and the quantity is above or equal to the conversion amount
             if ((currentMeasurement == "teaspoon" || currentMeasurement == "teaspoons" || currentMeasurement == "teaspoon/s") && ingredient.Quantity >= 3)
             {
+                //the quantity of thr ingredient changes
                 ingredient.Quantity = ingredient.Quantity / 3f;
+
+                //the measurement of the ingredient changes
                 ingredient.Measurement = "tablespoon/s";
             }
+            //else if the measurement is equal to the conversion measurement and the quantity is too large to stay at its current conversion then convert it back to the original ingredient measurement and change quantity accordingly
             else if ((currentMeasurement == "tablespoon" || currentMeasurement == "tablespoons" || currentMeasurement == "tablespoon/s") && ((ingredient.Quantity / 3) < 1))
             {
+                //the quantity of thr ingredient changes
                 ingredient.Quantity = ingredient.Quantity * 3f;
+
+                //the measurement of the ingredient changes
                 ingredient.Measurement = "teaspoon/s";
             }
 
+            //convert tablespoons to cups and back again
+            //if the ingredient's specific measurement is equal to any of the possible texts and the quantity is above or equal to the conversion amount
             if ((currentMeasurement == "tablespoon" || currentMeasurement == "tablespoons" || currentMeasurement == "tablespoon/s") && ingredient.Quantity >= 16)
             {
+                //the quantity of thr ingredient changes
                 ingredient.Quantity = ingredient.Quantity / 16f;
+
+                //the measurement of the ingredient changes
                 ingredient.Measurement = "cup/s";
             }
+            //else if the measurement is equal to the conversion measurement and the quantity is too large to stay at its current conversion then convert it back to the original ingredient measurement and change quantity accordingly
             else if ((currentMeasurement == "cup" || currentMeasurement == "cups" || currentMeasurement == "cup/s") && ((ingredient.Quantity / 16) < 1))
             {
+                //the quantity of thr ingredient changes
                 ingredient.Quantity = ingredient.Quantity * 16f;
+
+                //the measurement of the ingredient changes
                 ingredient.Measurement = "tablespoon/s";
             }
 
+            //convert grams to kilograms and back again
+            //if the ingredient's specific measurement is equal to any of the possible texts and the quantity is above or equal to the conversion amount
             if ((currentMeasurement == "g" || currentMeasurement == "g/s" || currentMeasurement == "gram" || currentMeasurement == "grams" || currentMeasurement == "gram/s") && ingredient.Quantity >= 1000)
             {
+                //the quantity of thr ingredient changes
                 ingredient.Quantity = ingredient.Quantity / 1000f;
+
+                //the measurement of the ingredient changes
                 ingredient.Measurement = "kg/s";
             }
+            //else if the measurement is equal to the conversion measurement and the quantity is too large to stay at its current conversion then convert it back to the original ingredient measurement and change quantity accordingly
             else if ((currentMeasurement == "kg" || currentMeasurement == "kgs" || currentMeasurement == "kg/s" || currentMeasurement == "kilogram" || currentMeasurement == "kilograms" || currentMeasurement == "kilogram/s") && ((ingredient.Quantity / 1000) < 1))
             {
+                //the quantity of thr ingredient changes
                 ingredient.Quantity = ingredient.Quantity * 1000f;
+
+                //the measurement of the ingredient changes
                 ingredient.Measurement = "g/s";
             }
 
+            //convert millileters to liters and back again
+            //if the ingredient's specific measurement is equal to any of the possible texts and the quantity is above or equal to the conversion amount
             if ((currentMeasurement == "ml" || currentMeasurement == "ml/s" || currentMeasurement == "milliliter" || currentMeasurement == "milliliters" || currentMeasurement == "milliliter/s") && ingredient.Quantity >= 1000)
             {
+                //the quantity of thr ingredient changes
                 ingredient.Quantity = ingredient.Quantity / 1000f;
+
+                //the measurement of the ingredient changes
                 ingredient.Measurement = "l/s";
             }
+            //else if the measurement is equal to the conversion measurement and the quantity is too large to stay at its current conversion then convert it back to the original ingredient measurement and change quantity accordingly
             else if ((currentMeasurement == "l" || currentMeasurement == "ls" || currentMeasurement == "l/s" || currentMeasurement == "liter" || currentMeasurement == "liters" || currentMeasurement == "liter/s") && ((ingredient.Quantity / 1000) < 1))
             {
+                //the quantity of thr ingredient changes
                 ingredient.Quantity = ingredient.Quantity * 1000f;
+
+                //the measurement of the ingredient changes
                 ingredient.Measurement = "ml/s";
             }
         }
