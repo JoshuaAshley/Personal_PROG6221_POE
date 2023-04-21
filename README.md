@@ -1,5 +1,8 @@
 # PROG6221 Programming 2A Portfolio OF Evidence
-![alt text](https://github.com/JoshuaAshley/Personal_PROG6221_POE/blob/main/ST10060590_PROG6221_POE/Image_Resources/Sanele's_Cooking_Book.png)
+<p align = "center">
+<img width="200" height="200" src="https://github.com/JoshuaAshley/Personal_PROG6221_POE/blob/main/ST10060590_PROG6221_POE/Image_Resources/Sanele's_Cooking_Book.png" alt="my banner">
+</p>
+
 ## Sanele's Cooking Book
 ### Description
 Welcome to Sanele's Cooking Book Application: The place where you can create all your recipe needs!<br/>
