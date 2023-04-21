@@ -37,8 +37,9 @@ namespace RecipeBook
         public string DisplayIngredients()
         {
             //the bullet point special character will be handled with later in the code
+            //also added decimal formatting to the output so that the float does not look like eg. 1,6666667
             string output = "• ";
-            output += _quantity + " " + _measurement + " of " + _ingredientName;
+            output += _quantity.ToString("F2") + " " + _measurement + " of " + _ingredientName;
             return output;
         }
     }
