@@ -39,7 +39,7 @@ There are three methods can be used to install and run the project folder, but f
 ### PART ONE
 The first release of three of the application. This part is the most basic in design and functionality
 
-**Design**
+**Design**<br/>
 A console application with colored text for menus, correct messages, or error messages to alert the user of changes within the runtime of the application.
 
 **Functions**
