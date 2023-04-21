@@ -16,6 +16,7 @@ namespace DataValidation
             {
                 //iput message
                 Console.Write(message);
+
                 //input
                 string input = Console.ReadLine();
 
@@ -24,10 +25,13 @@ namespace DataValidation
                 {
                     //sets the text console color to an error message indication color
                     Console.ForegroundColor = ConsoleColor.Red;
+
                     //error message
                     Console.WriteLine("Input cannot be null. Please try again.");
+
                     //resets the text console color
                     Console.ForegroundColor = ConsoleColor.Gray;
+
                     //run the while loop again
                     continue;
                 }
@@ -40,23 +44,29 @@ namespace DataValidation
                     {
                         //sets the text console color to an error message indication color
                         Console.ForegroundColor = ConsoleColor.Red;
+
                         //error message
                         Console.WriteLine("Invalid input. Please enter a positive integer.");
+
                         //resets the text console color
                         Console.ForegroundColor = ConsoleColor.Gray;
+
                         //run the while loop again
                         continue;
                     }
                     //if parsed correctly and the result is positive, the value becomes the result
                     value = result;
+                    //reset the text console color
                     Console.ForegroundColor = ConsoleColor.Gray;
                 }
                 else
                 {
                     //sets the text console color to an error message indication color
                     Console.ForegroundColor = ConsoleColor.Red;
+
                     //if it cannot be parsed correctly, error message
                     Console.WriteLine("Invalid input. Please enter a valid integer.");
+
                     //resets the text console color
                     Console.ForegroundColor = ConsoleColor.Gray;
                 }
@@ -78,6 +88,7 @@ namespace DataValidation
             {
                 //input message
                 Console.Write(message);
+
                 //input
                 string input = Console.ReadLine();
 
@@ -86,10 +97,13 @@ namespace DataValidation
                 {
                     //sets the text console color to an error message indication color
                     Console.ForegroundColor = ConsoleColor.Red;
+
                     //error message
                     Console.WriteLine("Input cannot be null. Please try again.");
+
                     //resets the text console color
                     Console.ForegroundColor = ConsoleColor.Gray;
+
                     //run the while loop again
                     continue;
                 }
@@ -102,10 +116,13 @@ namespace DataValidation
                     {
                         //sets the text console color to an error message indication color
                         Console.ForegroundColor = ConsoleColor.Red;
+
                         //error message
                         Console.WriteLine("Invalid input. Please enter a positive number.");
 
+                        //resets the console text color
                         Console.ForegroundColor = ConsoleColor.Gray;
+
                         //run the while loop again
                         continue;
                     }
@@ -116,8 +133,11 @@ namespace DataValidation
                 {
                     //sets the text console color to an error message indication color
                     Console.ForegroundColor = ConsoleColor.Red;
+
                     //if it cannot be parsed correctly, error message
                     Console.WriteLine("Invalid input. Please enter a valid number.");
+
+                    //resets the console text color
                     Console.ForegroundColor = ConsoleColor.Gray;
                 }
             }
@@ -156,10 +176,13 @@ namespace DataValidation
                     {
                         //sets the text console color to an error message indication color
                         Console.ForegroundColor = ConsoleColor.Red;
+
                         //error message
                         Console.Write("Invalid input. Please enter a non-negative number: ");
+
                         //resets the text console color
                         Console.ForegroundColor = ConsoleColor.Gray;
+
                         //run the while loop again
                         continue;
                     }
@@ -191,10 +214,13 @@ namespace DataValidation
                             {
                                 //sets the text console color to an error message indication color
                                 Console.ForegroundColor = ConsoleColor.Red;
+
                                 //error message
                                 Console.Write("Invalid input. Please enter non-negative integers: ");
+
                                 //resets the text console color
                                 Console.ForegroundColor = ConsoleColor.Gray;
+
                                 //restart the while loop
                                 continue;
                             }
@@ -219,10 +245,13 @@ namespace DataValidation
                             {
                                 //sets the text console color to an error message indication color
                                 Console.ForegroundColor = ConsoleColor.Red;
+
                                 //error message
                                 Console.Write("Invalid input. Please enter non-negative integers and a positive denominator: ");
+
                                 //resets the text console color
                                 Console.ForegroundColor = ConsoleColor.Gray;
+
                                 //restart the while loop
                                 continue;
                             }
@@ -232,8 +261,10 @@ namespace DataValidation
 
                 //sets the text console color to an error message indication color
                 Console.ForegroundColor = ConsoleColor.Red;
+
                 //else error message
                 Console.Write("Not a valid fraction. Please enter in the form of (E.g. 1 1/3): ");
+
                 //resets the text console color
                 Console.ForegroundColor = ConsoleColor.Gray;
             }
