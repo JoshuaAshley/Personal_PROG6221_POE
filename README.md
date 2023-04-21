@@ -2,7 +2,8 @@
 
 ## Sanele's Cooking Book
 ### Description
-Text will go here but for now the page is being setup.
+Welcome to Sanele's Cooking Book Application: The place where you can create all your recipe needs!<br/>
+The application that has been created is a C# program that allows the user to create any recipe with ingredients, instructions, and more.
 
 ## Installation
 There are three methods can be used to install and run the project folder, but first the DOTNET SDL must be installed.
@@ -21,4 +22,14 @@ There are three methods can be used to install and run the project folder, but f
 **_Step 5_**: Select build and run, or click on the green arrow with the project name next to it, or type:
 ```Ctrl F5```
 
-## PART ONE
+### Method 2: Cloning the Repository
+**_Step 1_**: Open Visual Studio.<br/>
+**_Step 2_**: Select the ```Clone Repository``` button.<br/>
+**_Step 3_**: Enter the url ```https://github.com/JoshuaAshley/Personal_PROG6221_POE.git```
+
+### Method 3: Downloading and Running with Command Prompt
+**_Step 1_**: Download the zip file from any one of the releases tagged PART_ONE, PART_TWO, or PART_THREE.<br/>
+**_Step 2_**: Extract all the contents of the zip file into the desired directory.<br/>
+**_Step 3_**: Locate the file location with the directory ```FILE LOCATION\ST10060590_PROG6221_POE\bin\Debug\net6.0``` and run the command prompt line.<br/>
+**_Step 4_**: Enter ```ST10060590_PROG6221_POE.exe```
+**_Step 5_**: Additionally, the file with the same name can be clicked and ran in the file explorer menu.
