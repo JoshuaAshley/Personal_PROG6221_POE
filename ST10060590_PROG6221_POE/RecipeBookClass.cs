@@ -605,23 +605,31 @@ namespace RecipeBook
         //method to reset the recipe ingredients and steps
         public void ResetRecipe()
         {
+            //gives the user a choice
             Console.WriteLine("Are you sure you would like to reset the recipe? Doing this will remove everything.\n" +
                 "Type 'Yes' to proceed.\n" +
                 "Type 'No' to return to the menu.");
 
+            //input
             string choice = Console.ReadLine().Trim().ToLower();
 
+            //while the input does not match the required choices
             while (choice != "yes" && choice != "no")
             {
+                //error message color text
                 Console.ForegroundColor = ConsoleColor.Red;
 
+                //error message
                 Console.Write("Input is not a valid selection. Please try again: ");
 
+                //resets the console text color
                 Console.ForegroundColor = ConsoleColor.Gray;
 
+                //re tries for an input
                 choice = Console.ReadLine().Trim().ToLower();
             }
 
+            //if the choice is to proceed
             if (choice == "yes")
             {
                 //initialize the global arrays again but this time set the lengths to 0 to reset the values within them
