@@ -389,7 +389,7 @@ namespace RecipeBook
                     //display the recipe in full
                     Console.WriteLine();
 
-                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.ForegroundColor = ConsoleColor.Cyan;
 
                     DisplayRecipe();
 
@@ -403,7 +403,7 @@ namespace RecipeBook
                     //display only the set of ingredients
                     Console.WriteLine();
 
-                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.ForegroundColor = ConsoleColor.Cyan;
 
                     DisplayIngredients();
 
@@ -417,7 +417,7 @@ namespace RecipeBook
                     //display only the set of instruction steps   
                     Console.WriteLine();
 
-                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.ForegroundColor = ConsoleColor.Cyan;
 
                     DisplayInstructions();
 
@@ -430,7 +430,9 @@ namespace RecipeBook
                 {
                     //allow the user to sale their ingredients
                     Console.WriteLine();
+
                     ScaleIngredients();
+
                     Console.WriteLine();
                 }
                 //else if variable is 5
@@ -508,11 +510,15 @@ namespace RecipeBook
             //nullable variable
             int? option;
 
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             //input message that gives the user a choice between 3 different scale types
             Console.WriteLine("Select an amount to scale up by:\n" +
                 "(1) Half.\n" +
                 "(2) Double.\n" +
                 "(3) Triple.");
+
+            Console.ForegroundColor = ConsoleColor.Gray;
 
             Console.WriteLine();
 
@@ -579,8 +585,12 @@ namespace RecipeBook
             //if the scale amount currently is at 1, meaning that the scaling has not changed
             if (scaleDownAmount == 1)
             {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+
                 //let the user know that the value of the ingredients is exactly the same as the original
                 Console.WriteLine("Ingredients are currently the same as the inital set.");
+
+                Console.ForegroundColor = ConsoleColor.Gray;
             }
             else
             {
@@ -605,10 +615,14 @@ namespace RecipeBook
         //method to reset the recipe ingredients and steps
         public void ResetRecipe()
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             //gives the user a choice
             Console.WriteLine("Are you sure you would like to reset the recipe? Doing this will remove everything.\n" +
                 "Type 'Yes' to proceed.\n" +
                 "Type 'No' to return to the menu.");
+
+            Console.ForegroundColor = ConsoleColor.Gray;
 
             //input
             string choice = Console.ReadLine().Trim().ToLower();
