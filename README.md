@@ -3,9 +3,10 @@
 ## Sanele's Cooking Book
 ### Description
 Welcome to Sanele's Cooking Book Application: The place where you can create all your recipe needs!<br/>
-The application that has been created is a C# program that allows the user to create any recipe with ingredients, instructions, and more.
+The system application that has been created is a C# program that allows the user to create any recipe with ingredients, instructions, and more.
 
 ## Installation
+The application can run on macOS, Windows, and Linux machines.<br/>
 There are three methods can be used to install and run the project folder, but first the DOTNET SDL must be installed.
 
 ### DOTNET Installation
@@ -31,5 +32,26 @@ There are three methods can be used to install and run the project folder, but f
 **_Step 1_**: Download the zip file from any one of the releases tagged PART_ONE, PART_TWO, or PART_THREE.<br/>
 **_Step 2_**: Extract all the contents of the zip file into the desired directory.<br/>
 **_Step 3_**: Locate the file location with the directory ```FILE LOCATION\ST10060590_PROG6221_POE\bin\Debug\net6.0``` and run the command prompt line.<br/>
-**_Step 4_**: Enter ```ST10060590_PROG6221_POE.exe```
+**_Step 4_**: Enter ```ST10060590_PROG6221_POE.exe```<br/>
 **_Step 5_**: Additionally, the file with the same name can be clicked and ran in the file explorer menu.
+
+## PARTS
+### PART ONE
+The first release of three of the application. This part is the most basic in design and functionality
+
+**Design**
+A console application with colored text for menus, correct messages, or error messages to alert the user of changes within the runtime of the application.
+
+**Functions**
+1. The user can add a recipe name.<br/>
+2. The user can specfiy how many ingredients they would like to add.<br/>
+3. The user can enter in the details of each ingredient.<br/>
+4. The user can specify how many instructions they would like to add.<br/>
+5. The user can enter in the details of each method step.<br/>
+6. The user can view the full recipe.<br/>
+7. The user can view the ingredients only.<br/>
+8. The user can view the instructions only.<br/>
+9. The user can option to scale each ingredient amounts with specified values.<br/>
+10. The user can option to set the ingredient amounts back to the original values.<br/>
+11. The user can option to reset the recipe.<br/>
+12. The user can option to create a new recipe; however the previous recipe/s will not be stored in memory.
