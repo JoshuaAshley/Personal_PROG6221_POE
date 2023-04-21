@@ -245,6 +245,9 @@ namespace RecipeBook
             //loops through the full array and writes the formatted string of the Ingredients method to create a neat output
             for (int i = 0; i < ingredients.Length; i++)
             {
+
+                ChangeMeasurement(ingredients[i]);
+
                 output += ingredients[i].DisplayIngredients() + "\n";
             }
 
@@ -278,6 +281,9 @@ namespace RecipeBook
             //loops through the full array and writes the formatted string of the Ingredients method to create a neat output
             for (int i = 0; i < ingredients.Length; i++)
             {
+
+                ChangeMeasurement(ingredients[i]);
+
                 output += ingredients[i].DisplayIngredients() + "\n";
             }
 
@@ -478,6 +484,22 @@ namespace RecipeBook
             }
         }
 
+        public void ChangeMeasurement(Ingredient ingredient)
+        {
+            string currentMeasurement = ingredient.Measurement.ToLower();
+
+            if ((currentMeasurement == "teaspoon" || currentMeasurement == "teaspoons" || currentMeasurement == "teaspoon/s") && ingredient.Quantity >= 3)
+            {
+                ingredient.Quantity = ingredient.Quantity / 3f;
+                ingredient.Measurement = "tablespoon/s";
+            }
+            else if ((currentMeasurement == "tablespoon" || currentMeasurement == "tablespoons" || currentMeasurement == "tablespoon/s") && ((ingredient.Quantity / 3) <= 1))
+            {
+                ingredient.Quantity = ingredient.Quantity * 3f;
+                ingredient.Measurement = "teaspoon/s";
+            }
+        }
+
         //method to scale each ingredient in the array
         //the method takes in an amount which will be the amount each ingredient must be scaled by
         public void ScaleUp(float amount)
@@ -661,8 +683,6 @@ namespace RecipeBook
                 //resets the text console color
                 Console.ForegroundColor = ConsoleColor.Gray;
             }
-
-
         }
     }
 }
