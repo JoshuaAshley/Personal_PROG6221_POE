@@ -9,16 +9,19 @@ namespace RecipeBook
     {
         //private variable declaration
         private string _ingredientName;
+
         //variable properties such as get set methods
         public string IngredientName { get { return _ingredientName; } set { _ingredientName = value; } }
 
         //private variable declaration
         private float _quantity;
+
         //variable properties such as get set methods
         public float Quantity { get { return _quantity; } set { _quantity = value; } }
 
         //private variable declaration
         private string _measurement;
+
         //variable properties such as get set methods
         public string Measurement { get { return _measurement; } set { _measurement = value; } }
 
@@ -45,6 +48,7 @@ namespace RecipeBook
     {
         //private variable declaration
         private string _description;
+
         //variable properties such as get set methods
         public string Description { get { return _description; } set { _description = value; } }
 
@@ -91,7 +95,9 @@ namespace RecipeBook
 
             //methods that must run for the application to work correclty
             DisplayWelcome();
+
             CreateRecipe();
+
             Menu();
         }
 
@@ -120,6 +126,7 @@ namespace RecipeBook
             {
                 //input message
                 Console.Write("Please enter the name of the ingredient " + (i + 1) + ": ");
+
                 //input
                 string ingredientName = Console.ReadLine().Trim();
 
@@ -128,10 +135,13 @@ namespace RecipeBook
                 {
                     //sets the text console color to an error message indication color
                     Console.ForegroundColor = ConsoleColor.Red;
+
                     //error messsage
                     Console.Write("Input cannot be null. Please try again: ");
+
                     //resets the text console color
                     Console.ForegroundColor = ConsoleColor.Gray;
+
                     //re enter variable to try again
                     ingredientName = Console.ReadLine().Trim();
                 }
@@ -141,6 +151,7 @@ namespace RecipeBook
 
                 //input message
                 Console.Write("Please enter the measurement of " + ingredientName + " (E.g. tablespoon): ");
+
                 //input
                 string measurement = Console.ReadLine().Trim();
 
@@ -149,20 +160,26 @@ namespace RecipeBook
                 {
                     //sets the text console color to an error message indication color
                     Console.ForegroundColor = ConsoleColor.Red;
+
                     //error
                     Console.Write("Input cannot be null. Please try again: ");
+
                     //resets the text console color
                     Console.ForegroundColor = ConsoleColor.Gray;
+
                     //re enrter variable to try again
                     measurement = Console.ReadLine().Trim();
                 }
 
                 //populates the array at the for loop counter with the recently inputted variables
                 ingredients[i] = new Ingredient(ingredientName, quantity, measurement);
+
                 //sets the text console color to a correct message indication color
                 Console.ForegroundColor = ConsoleColor.Green;
+
                 //successful message
                 Console.WriteLine("Ingreient captured successfully");
+
                 //resets the text console color
                 Console.ForegroundColor = ConsoleColor.Gray;
             }
@@ -185,6 +202,7 @@ namespace RecipeBook
             {
                 //input message
                 Console.Write("Please enter the description for step " + (i + 1) + " of the method: ");
+
                 //input
                 string description = Console.ReadLine().Trim();
 
@@ -193,20 +211,26 @@ namespace RecipeBook
                 {
                     //sets the text console color to an error message indication color
                     Console.ForegroundColor = ConsoleColor.Red;
+
                     //error
                     Console.Write("Input cannot be null. Please try again: ");
+
                     //resets the text console color
                     Console.ForegroundColor = ConsoleColor.Gray;
+
                     //re enter the variable to try again
                     description = Console.ReadLine().Trim();
                 }
 
                 //populates the array at the for loop counter with the recently inputted variables
                 steps[i] = new Method(description);
+
                 //sets the text console color to a correct message indication color
                 Console.ForegroundColor = ConsoleColor.Green;
+
                 //successful message
                 Console.WriteLine("Method captured successfully");
+
                 //resets the text console color
                 Console.ForegroundColor = ConsoleColor.Gray;
             }
@@ -289,10 +313,13 @@ namespace RecipeBook
             {
                 //sets the text console color to an error message indication color
                 Console.ForegroundColor = ConsoleColor.Red;
+
                 //error
                 Console.Write("Input cannot be null. Please try again: ");
+
                 //resets the text console color
                 Console.ForegroundColor = ConsoleColor.Gray;
+
                 //re enter variable to try again
                 recipeName = Console.ReadLine().Trim();
             }
@@ -361,9 +388,13 @@ namespace RecipeBook
                 {
                     //display the recipe in full
                     Console.WriteLine();
+
                     Console.ForegroundColor = ConsoleColor.Blue;
+
                     DisplayRecipe();
+
                     Console.ForegroundColor = ConsoleColor.Gray;
+
                     Console.WriteLine();
                 }
                 //else if variable is 2
@@ -371,9 +402,13 @@ namespace RecipeBook
                 {
                     //display only the set of ingredients
                     Console.WriteLine();
+
                     Console.ForegroundColor = ConsoleColor.Blue;
+
                     DisplayIngredients();
+
                     Console.ForegroundColor = ConsoleColor.Gray;
+
                     Console.WriteLine();
                 }
                 //else if variable is 3
@@ -381,9 +416,13 @@ namespace RecipeBook
                 {
                     //display only the set of instruction steps   
                     Console.WriteLine();
+
                     Console.ForegroundColor = ConsoleColor.Blue;
+
                     DisplayInstructions();
+
                     Console.ForegroundColor = ConsoleColor.Gray;
+
                     Console.WriteLine();
                 }
                 //else if variable is 4
@@ -399,7 +438,9 @@ namespace RecipeBook
                 {
                     //set the ingredients back to the initial values
                     Console.WriteLine();
+
                     ReturnInitialIngredients();
+
                     Console.WriteLine();
                 }
                 //else if variable is  6
@@ -407,7 +448,9 @@ namespace RecipeBook
                 {
                     //reset the arrays to 0
                     Console.WriteLine();
+
                     ResetRecipe();
+
                     Console.WriteLine();
                 }
                 //else if variable is 7
@@ -415,7 +458,9 @@ namespace RecipeBook
                 {
                     //allow the user to create a new recipe
                     Console.WriteLine();
+
                     CreateRecipe();
+
                     Console.WriteLine();
 
                     //here the method has used recursion to rerun the entire program if the user wishes to create a new recipe
@@ -505,10 +550,13 @@ namespace RecipeBook
             {
                 //scale the amount with the scale amount
                 ScaleUp(scaleUpAmount);
+
                 //sets the text console color to a correct message indication color
                 Console.ForegroundColor = ConsoleColor.Green;
+
                 //give the user an indication that the change was made and it was successful
                 Console.WriteLine("Ingredients changed successfully.");
+
                 //resets the text console color
                 Console.ForegroundColor = ConsoleColor.Gray;
             }
@@ -516,8 +564,10 @@ namespace RecipeBook
             {
                 //sets the text console color to an error message indication color
                 Console.ForegroundColor = ConsoleColor.Red;
+
                 //error message
                 Console.WriteLine("Not a valid scale amount.");
+
                 //resets the text console color
                 Console.ForegroundColor = ConsoleColor.Gray;
             }
@@ -540,8 +590,10 @@ namespace RecipeBook
 
                 //sets the text console color to a correct message indication color
                 Console.ForegroundColor = ConsoleColor.Green;
+
                 //give the user an indication that the change was made and it was successful
                 Console.WriteLine("Ingredients changed successfully.");
+
                 //resets the text console color
                 Console.ForegroundColor = ConsoleColor.Gray;
 
@@ -556,11 +608,15 @@ namespace RecipeBook
             //initialize the global arrays again but this time set the lengths to 0 to reset the values within them
             //these lengths will not cause problems as the lengths will be initialized again when a new recipe is created
             ingredients = new Ingredient[0];
+
             steps = new Method[0];
+
             //sets the text console color to a correct message indication color
             Console.ForegroundColor = ConsoleColor.Green;
+
             //give the user an indication that the change was made and it was successful
             Console.WriteLine("Recipe Reset successfully.");
+
             //resets the text console color
             Console.ForegroundColor = ConsoleColor.Gray;
         }
