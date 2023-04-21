@@ -605,20 +605,42 @@ namespace RecipeBook
         //method to reset the recipe ingredients and steps
         public void ResetRecipe()
         {
-            //initialize the global arrays again but this time set the lengths to 0 to reset the values within them
-            //these lengths will not cause problems as the lengths will be initialized again when a new recipe is created
-            ingredients = new Ingredient[0];
+            Console.WriteLine("Are you sure you would like to reset the recipe? Doing this will remove everything.\n" +
+                "Type 'Yes' to proceed.\n" +
+                "Type 'No' to return to the menu.");
 
-            steps = new Method[0];
+            string choice = Console.ReadLine().Trim().ToLower();
 
-            //sets the text console color to a correct message indication color
-            Console.ForegroundColor = ConsoleColor.Green;
+            while (choice != "yes" && choice != "no")
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
 
-            //give the user an indication that the change was made and it was successful
-            Console.WriteLine("Recipe Reset successfully.");
+                Console.Write("Input is not a valid selection. Please try again: ");
 
-            //resets the text console color
-            Console.ForegroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+
+                choice = Console.ReadLine().Trim().ToLower();
+            }
+
+            if (choice == "yes")
+            {
+                //initialize the global arrays again but this time set the lengths to 0 to reset the values within them
+                //these lengths will not cause problems as the lengths will be initialized again when a new recipe is created
+                ingredients = new Ingredient[0];
+
+                steps = new Method[0];
+
+                //sets the text console color to a correct message indication color
+                Console.ForegroundColor = ConsoleColor.Green;
+
+                //give the user an indication that the change was made and it was successful
+                Console.WriteLine("Recipe Reset successfully.");
+
+                //resets the text console color
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
+
+
         }
     }
 }
